@@ -7,7 +7,7 @@ Aplicación de consulta y reporte de vulnerabilidades.
 - Python 3.9 o superior.
 - Acceso a Internet para consultar las APIs públicas de NVD, OSV y el portal de plugins de Tenable.
 - (Opcional) Definir la variable de entorno `NVD_API_KEY` si se dispone de una clave para la API de NVD a fin de evitar límites o bloqueos.
-- Definir las variables de entorno `TENABLE_ACCESS_KEY` y `TENABLE_SECRET_KEY` con las credenciales de Tenable.io necesarias para consultar la biblioteca oficial de plugins.
+- Definir las variables de entorno `TENABLE_ACCESS_KEY` y `TENABLE_SECRET_KEY` con las credenciales de Tenable.io necesarias para consultar la biblioteca oficial de plugins (si no se definen, la aplicación las solicitará de forma interactiva cuando intentes usar Tenable).
 
 ## Ejecución
 
@@ -26,7 +26,7 @@ export TENABLE_SECRET_KEY="<tu_secret_key>"
 export NVD_API_KEY="<tu_api_key>"
 ```
 
-La herramienta validará la presencia de las credenciales de Tenable antes de intentar realizar búsquedas en esa fuente.
+La herramienta validará la presencia de las credenciales de Tenable antes de intentar realizar búsquedas en esa fuente y, en caso de no encontrarlas, permitirá introducirlas en la consola para usarlas durante la sesión actual.
 
 ## Funcionalidades
 
